@@ -1,8 +1,12 @@
 {
   "name": "top-app",
   "version": "0.1.0",
+  "prettier": "@company/prettier-config",
   "private": true,
   "scripts": {
+    "lint-staged": {
+      "**/*": "prettier --write --ignore-unknown"
+    },
     "prepare": "husky install",
     "dev": "next dev",
     "build": "next build",
