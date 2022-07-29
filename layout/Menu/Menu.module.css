@@ -43,6 +43,16 @@
 	border-left: 1px solid #DFDFDF;
 }
 
+/* stylelint-disable-next-line no-duplicate-selectors */
+
+/* .secondBlock {
+	display: none;
+} */
+
+.secondLevelBlock {
+	overflow: hidden;
+}
+
 .thirdLevel {
 	display: block;
 
@@ -51,6 +61,7 @@
 	cursor: pointer;
 
 	color: var(--gray-dark);
+	outline-offset: -1px;
 
 	font-size: 14px;
 	font-weight: 500;
@@ -60,8 +71,4 @@
 .thirdLevelActive,
 .thirdLevel:hover {
 	color: var(--primary);
-}
-
-.secondBlockOpened:last-child {
-	margin-bottom: 20px;
 }

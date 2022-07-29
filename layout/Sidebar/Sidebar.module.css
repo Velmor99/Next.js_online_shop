@@ -1,1 +1,5 @@
-/* stylelint-disable-next-line no-empty-source */
+.sidebar {
+	display: grid;
+	align-content: start;
+	gap: 20px;
+}
