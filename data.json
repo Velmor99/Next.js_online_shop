@@ -1,0 +1,651 @@
+{
+    "categories": [
+        {
+            "_id": {
+                "secondCategory": "Аналитика"
+            },
+            "pages": [
+                {
+                    "alias": "financial-analitics",
+                    "title": "Курсы по финансовой аналитике",
+                    "_id": "lskdfdsjfljdl",
+                    "category": "Финансовая аналитика"
+                },
+                {
+                    "alias": "big-data",
+                    "title": "Курсы по Big data",
+                    "_id": "adsjfoewije",
+                    "category": "Big data"
+                },
+                {
+                    "alias": "data-science",
+                    "title": "Курсы по Data science",
+                    "_id": "wopkr34sdf",
+                    "category": "Data science"
+                },
+                {
+                    "alias": "machine-learning",
+                    "title": "Курсы по машинному обучению",
+                    "_id": "wprekf3rkifg",
+                    "category": "Машинное обучение"
+                }
+            ]
+        },
+        {
+            "_id": {
+                "secondCategory": "Программирование"
+            },
+            "pages": [
+                {
+                    "alias": "python",
+                    "title": "Курсы по финансовой аналитике",
+                    "_id": "lskdfdsjfljdl",
+                    "category": "Финансовая аналитика"
+                },
+                {
+                    "alias": "design",
+                    "title": "Курсы по финансовой аналитике",
+                    "_id": "lskdfdsjfljdl",
+                    "category": "Финансовая аналитика"
+                }
+            ]
+        },
+        {
+            "_id": {
+                "secondCategory": "Бизнес"
+            },
+            "pages": [
+                {
+                    "alias": "enterprise",
+                    "title": "Курсы по финансовой аналитике",
+                    "_id": "lskdfdsjfljdl",
+                    "category": "Финансовая аналитика"
+                },
+                {
+                    "alias": "analytics",
+                    "title": "Курсы по финансовой аналитике",
+                    "_id": "lskdfdsjfljdl",
+                    "category": "Финансовая аналитика"
+                }
+            ]
+        },
+        {
+            "_id": {
+                "secondCategory": "Прочее"
+            },
+            "pages": [
+                {
+                    "alias": "handmade",
+                    "title": "Курсы по финансовой аналитике",
+                    "_id": "lskdfdsjfljdl",
+                    "category": "Финансовая аналитика"
+                },
+                {
+                    "alias": "sport",
+                    "title": "Курсы по Big data",
+                    "_id": "adsjfoewije",
+                    "category": "Big data"
+                },
+                {
+                    "alias": "pets",
+                    "title": "Курсы по Data science",
+                    "_id": "wopkr34sdf",
+                    "category": "Data science"
+                },
+                {
+                    "alias": "games",
+                    "title": "Курсы по машинному обучению",
+                    "_id": "wprekf3rkifg",
+                    "category": "Машинное обучение"
+                }
+            ]
+        }
+    ],
+
+
+    
+    "pages": [
+        {
+            "category": "design",
+            "tags": [
+                "adobe photoshop",
+                "графический дизайн",
+                "веб дизайн"
+            ],
+            "id": 1,
+            "secondCategory": "Дизайн",
+            "alias": "photoshop",
+            "title": "Курсы Photoshop",
+            "seoText": "",
+            "tagsTitle": "Навыки",
+            "metaTitle": "Лучшие курсы photoshop | Обучение Photoshop с нуля 2022",
+            "metaDescription": "Рейтинг курсы Adobe Photoshop, обучение фотошопу для начинающих | Отзывы учеников о курсах по графическому дизайну в фотошопе. Освой Photoshop онлайн с нуля. Бесплатные курсы и уроки",
+            "firstCategory": 0,
+            "advantages": [
+                {
+                    "_id": "lksdjfldsjf",
+                    "title": "",
+                    "description": ""
+                }
+            ],
+            "createdAt": "2022-05-21T17:54:12.3342",
+            "updatedAt": "2022-05-21T17:54:12.3342",
+            "__v": 0,
+            "hh": {
+                "__id": "lskdjfldskfdsj",
+                "count": 13000,
+                "juniorSalary": 35000,
+                "middleSalary": 110000,
+                "seniorSalary": 194000,
+                "updatedAt": "2022-05-21T17:54:12.3342"
+            }
+        },
+        {
+            "category": "design",
+            "tags": [
+                "adobe photoshop",
+                "графический дизайн",
+                "веб дизайн"
+            ],
+            "id": 1,
+            "secondCategory": "Дизайн",
+            "alias": "financial-analitics",
+            "title": "Курсы Photoshop",
+            "seoText": "",
+            "tagsTitle": "Навыки",
+            "metaTitle": "Лучшие курсы photoshop | Обучение Photoshop с нуля 2022",
+            "metaDescription": "Рейтинг курсы Adobe Photoshop, обучение фотошопу для начинающих | Отзывы учеников о курсах по графическому дизайну в фотошопе. Освой Photoshop онлайн с нуля. Бесплатные курсы и уроки",
+            "firstCategory": 0,
+            "advantages": [
+                {
+                    "_id": "lksdjfldsjf",
+                    "title": "",
+                    "description": ""
+                }
+            ],
+            "createdAt": "2022-05-21T17:54:12.3342",
+            "updatedAt": "2022-05-21T17:54:12.3342",
+            "__v": 0,
+            "hh": {
+                "__id": "lskdjfldskfdsj",
+                "count": 13000,
+                "juniorSalary": 35000,
+                "middleSalary": 110000,
+                "seniorSalary": 194000,
+                "updatedAt": "2022-05-21T17:54:12.3342"
+            }
+        },
+        {
+            "category": "design",
+            "tags": [
+                "adobe photoshop",
+                "графический дизайн",
+                "веб дизайн"
+            ],
+            "id": 1,
+            "secondCategory": "Дизайн",
+            "alias": "big-data",
+            "title": "Курсы Photoshop",
+            "seoText": "",
+            "tagsTitle": "Навыки",
+            "metaTitle": "Лучшие курсы photoshop | Обучение Photoshop с нуля 2022",
+            "metaDescription": "Рейтинг курсы Adobe Photoshop, обучение фотошопу для начинающих | Отзывы учеников о курсах по графическому дизайну в фотошопе. Освой Photoshop онлайн с нуля. Бесплатные курсы и уроки",
+            "firstCategory": 0,
+            "advantages": [
+                {
+                    "_id": "lksdjfldsjf",
+                    "title": "",
+                    "description": ""
+                }
+            ],
+            "createdAt": "2022-05-21T17:54:12.3342",
+            "updatedAt": "2022-05-21T17:54:12.3342",
+            "__v": 0,
+            "hh": {
+                "__id": "lskdjfldskfdsj",
+                "count": 13000,
+                "juniorSalary": 35000,
+                "middleSalary": 110000,
+                "seniorSalary": 194000,
+                "updatedAt": "2022-05-21T17:54:12.3342"
+            }
+        },
+        {
+            "category": "design",
+            "tags": [
+                "adobe photoshop",
+                "графический дизайн",
+                "веб дизайн"
+            ],
+            "id": 1,
+            "secondCategory": "Дизайн",
+            "alias": "data-science",
+            "title": "Курсы Photoshop",
+            "seoText": "",
+            "tagsTitle": "Навыки",
+            "metaTitle": "Лучшие курсы photoshop | Обучение Photoshop с нуля 2022",
+            "metaDescription": "Рейтинг курсы Adobe Photoshop, обучение фотошопу для начинающих | Отзывы учеников о курсах по графическому дизайну в фотошопе. Освой Photoshop онлайн с нуля. Бесплатные курсы и уроки",
+            "firstCategory": 0,
+            "advantages": [
+                {
+                    "_id": "lksdjfldsjf",
+                    "title": "",
+                    "description": ""
+                }
+            ],
+            "createdAt": "2022-05-21T17:54:12.3342",
+            "updatedAt": "2022-05-21T17:54:12.3342",
+            "__v": 0,
+            "hh": {
+                "__id": "lskdjfldskfdsj",
+                "count": 13000,
+                "juniorSalary": 35000,
+                "middleSalary": 110000,
+                "seniorSalary": 194000,
+                "updatedAt": "2022-05-21T17:54:12.3342"
+            }
+        },
+        {
+            "category": "design",
+            "tags": [
+                "adobe photoshop",
+                "графический дизайн",
+                "веб дизайн"
+            ],
+            "id": 1,
+            "secondCategory": "Дизайн",
+            "alias": "machine-learning",
+            "title": "Курсы Photoshop",
+            "seoText": "",
+            "tagsTitle": "Навыки",
+            "metaTitle": "Лучшие курсы photoshop | Обучение Photoshop с нуля 2022",
+            "metaDescription": "Рейтинг курсы Adobe Photoshop, обучение фотошопу для начинающих | Отзывы учеников о курсах по графическому дизайну в фотошопе. Освой Photoshop онлайн с нуля. Бесплатные курсы и уроки",
+            "firstCategory": 0,
+            "advantages": [
+                {
+                    "_id": "lksdjfldsjf",
+                    "title": "",
+                    "description": ""
+                }
+            ],
+            "createdAt": "2022-05-21T17:54:12.3342",
+            "updatedAt": "2022-05-21T17:54:12.3342",
+            "__v": 0,
+            "hh": {
+                "__id": "lskdjfldskfdsj",
+                "count": 13000,
+                "juniorSalary": 35000,
+                "middleSalary": 110000,
+                "seniorSalary": 194000,
+                "updatedAt": "2022-05-21T17:54:12.3342"
+            }
+        },
+        {
+            "category": "design",
+            "tags": [
+                "adobe photoshop",
+                "графический дизайн",
+                "веб дизайн"
+            ],
+            "id": 1,
+            "secondCategory": "Дизайн",
+            "alias": "python",
+            "title": "Курсы Photoshop",
+            "seoText": "",
+            "tagsTitle": "Навыки",
+            "metaTitle": "Лучшие курсы photoshop | Обучение Photoshop с нуля 2022",
+            "metaDescription": "Рейтинг курсы Adobe Photoshop, обучение фотошопу для начинающих | Отзывы учеников о курсах по графическому дизайну в фотошопе. Освой Photoshop онлайн с нуля. Бесплатные курсы и уроки",
+            "firstCategory": 0,
+            "advantages": [
+                {
+                    "_id": "lksdjfldsjf",
+                    "title": "",
+                    "description": ""
+                }
+            ],
+            "createdAt": "2022-05-21T17:54:12.3342",
+            "updatedAt": "2022-05-21T17:54:12.3342",
+            "__v": 0,
+            "hh": {
+                "__id": "lskdjfldskfdsj",
+                "count": 13000,
+                "juniorSalary": 35000,
+                "middleSalary": 110000,
+                "seniorSalary": 194000,
+                "updatedAt": "2022-05-21T17:54:12.3342"
+            }
+        },
+        {
+            "category": "design",
+            "tags": [
+                "adobe photoshop",
+                "графический дизайн",
+                "веб дизайн"
+            ],
+            "id": 1,
+            "secondCategory": "Дизайн",
+            "alias": "java-script",
+            "title": "Курсы Photoshop",
+            "seoText": "",
+            "tagsTitle": "Навыки",
+            "metaTitle": "Лучшие курсы photoshop | Обучение Photoshop с нуля 2022",
+            "metaDescription": "Рейтинг курсы Adobe Photoshop, обучение фотошопу для начинающих | Отзывы учеников о курсах по графическому дизайну в фотошопе. Освой Photoshop онлайн с нуля. Бесплатные курсы и уроки",
+            "firstCategory": 0,
+            "advantages": [
+                {
+                    "_id": "lksdjfldsjf",
+                    "title": "",
+                    "description": ""
+                }
+            ],
+            "createdAt": "2022-05-21T17:54:12.3342",
+            "updatedAt": "2022-05-21T17:54:12.3342",
+            "__v": 0,
+            "hh": {
+                "__id": "lskdjfldskfdsj",
+                "count": 13000,
+                "juniorSalary": 35000,
+                "middleSalary": 110000,
+                "seniorSalary": 194000,
+                "updatedAt": "2022-05-21T17:54:12.3342"
+            }
+        },
+        {
+            "category": "design",
+            "tags": [
+                "adobe photoshop",
+                "графический дизайн",
+                "веб дизайн"
+            ],
+            "id": 1,
+            "secondCategory": "Дизайн",
+            "alias": "enterprise",
+            "title": "Курсы Photoshop",
+            "seoText": "",
+            "tagsTitle": "Навыки",
+            "metaTitle": "Лучшие курсы photoshop | Обучение Photoshop с нуля 2022",
+            "metaDescription": "Рейтинг курсы Adobe Photoshop, обучение фотошопу для начинающих | Отзывы учеников о курсах по графическому дизайну в фотошопе. Освой Photoshop онлайн с нуля. Бесплатные курсы и уроки",
+            "firstCategory": 0,
+            "advantages": [
+                {
+                    "_id": "lksdjfldsjf",
+                    "title": "",
+                    "description": ""
+                }
+            ],
+            "createdAt": "2022-05-21T17:54:12.3342",
+            "updatedAt": "2022-05-21T17:54:12.3342",
+            "__v": 0,
+            "hh": {
+                "__id": "lskdjfldskfdsj",
+                "count": 13000,
+                "juniorSalary": 35000,
+                "middleSalary": 110000,
+                "seniorSalary": 194000,
+                "updatedAt": "2022-05-21T17:54:12.3342"
+            }
+        },
+        {
+            "category": "design",
+            "tags": [
+                "adobe photoshop",
+                "графический дизайн",
+                "веб дизайн"
+            ],
+            "id": 1,
+            "secondCategory": "Дизайн",
+            "alias": "analytics",
+            "title": "Курсы Photoshop",
+            "seoText": "",
+            "tagsTitle": "Навыки",
+            "metaTitle": "Лучшие курсы photoshop | Обучение Photoshop с нуля 2022",
+            "metaDescription": "Рейтинг курсы Adobe Photoshop, обучение фотошопу для начинающих | Отзывы учеников о курсах по графическому дизайну в фотошопе. Освой Photoshop онлайн с нуля. Бесплатные курсы и уроки",
+            "firstCategory": 0,
+            "advantages": [
+                {
+                    "_id": "lksdjfldsjf",
+                    "title": "",
+                    "description": ""
+                }
+            ],
+            "createdAt": "2022-05-21T17:54:12.3342",
+            "updatedAt": "2022-05-21T17:54:12.3342",
+            "__v": 0,
+            "hh": {
+                "__id": "lskdjfldskfdsj",
+                "count": 13000,
+                "juniorSalary": 35000,
+                "middleSalary": 110000,
+                "seniorSalary": 194000,
+                "updatedAt": "2022-05-21T17:54:12.3342"
+            }
+        },
+        {
+            "category": "design",
+            "tags": [
+                "adobe photoshop",
+                "графический дизайн",
+                "веб дизайн"
+            ],
+            "id": 1,
+            "secondCategory": "Дизайн",
+            "alias": "handmade",
+            "title": "Курсы Photoshop",
+            "seoText": "",
+            "tagsTitle": "Навыки",
+            "metaTitle": "Лучшие курсы photoshop | Обучение Photoshop с нуля 2022",
+            "metaDescription": "Рейтинг курсы Adobe Photoshop, обучение фотошопу для начинающих | Отзывы учеников о курсах по графическому дизайну в фотошопе. Освой Photoshop онлайн с нуля. Бесплатные курсы и уроки",
+            "firstCategory": 0,
+            "advantages": [
+                {
+                    "_id": "lksdjfldsjf",
+                    "title": "",
+                    "description": ""
+                }
+            ],
+            "createdAt": "2022-05-21T17:54:12.3342",
+            "updatedAt": "2022-05-21T17:54:12.3342",
+            "__v": 0,
+            "hh": {
+                "__id": "lskdjfldskfdsj",
+                "count": 13000,
+                "juniorSalary": 35000,
+                "middleSalary": 110000,
+                "seniorSalary": 194000,
+                "updatedAt": "2022-05-21T17:54:12.3342"
+            }
+        },
+        {
+            "category": "design",
+            "tags": [
+                "adobe photoshop",
+                "графический дизайн",
+                "веб дизайн"
+            ],
+            "id": 1,
+            "secondCategory": "Дизайн",
+            "alias": "games",
+            "title": "Курсы Photoshop",
+            "seoText": "",
+            "tagsTitle": "Навыки",
+            "metaTitle": "Лучшие курсы photoshop | Обучение Photoshop с нуля 2022",
+            "metaDescription": "Рейтинг курсы Adobe Photoshop, обучение фотошопу для начинающих | Отзывы учеников о курсах по графическому дизайну в фотошопе. Освой Photoshop онлайн с нуля. Бесплатные курсы и уроки",
+            "firstCategory": 0,
+            "advantages": [
+                {
+                    "_id": "lksdjfldsjf",
+                    "title": "",
+                    "description": ""
+                }
+            ],
+            "createdAt": "2022-05-21T17:54:12.3342",
+            "updatedAt": "2022-05-21T17:54:12.3342",
+            "__v": 0,
+            "hh": {
+                "__id": "lskdjfldskfdsj",
+                "count": 13000,
+                "juniorSalary": 35000,
+                "middleSalary": 110000,
+                "seniorSalary": 194000,
+                "updatedAt": "2022-05-21T17:54:12.3342"
+            }
+        },
+        {
+            "category": "design",
+            "tags": [
+                "adobe photoshop",
+                "графический дизайн",
+                "веб дизайн"
+            ],
+            "id": 1,
+            "secondCategory": "Дизайн",
+            "alias": "sport",
+            "title": "Курсы Photoshop",
+            "seoText": "",
+            "tagsTitle": "Навыки",
+            "metaTitle": "Лучшие курсы photoshop | Обучение Photoshop с нуля 2022",
+            "metaDescription": "Рейтинг курсы Adobe Photoshop, обучение фотошопу для начинающих | Отзывы учеников о курсах по графическому дизайну в фотошопе. Освой Photoshop онлайн с нуля. Бесплатные курсы и уроки",
+            "firstCategory": 0,
+            "advantages": [
+                {
+                    "_id": "lksdjfldsjf",
+                    "title": "",
+                    "description": ""
+                }
+            ],
+            "createdAt": "2022-05-21T17:54:12.3342",
+            "updatedAt": "2022-05-21T17:54:12.3342",
+            "__v": 0,
+            "hh": {
+                "__id": "lskdjfldskfdsj",
+                "count": 13000,
+                "juniorSalary": 35000,
+                "middleSalary": 110000,
+                "seniorSalary": 194000,
+                "updatedAt": "2022-05-21T17:54:12.3342"
+            }
+        },
+        {
+            "category": "design",
+            "tags": [
+                "adobe photoshop",
+                "графический дизайн",
+                "веб дизайн"
+            ],
+            "id": 1,
+            "secondCategory": "Дизайн",
+            "alias": "pets",
+            "title": "Курсы Photoshop",
+            "seoText": "",
+            "tagsTitle": "Навыки",
+            "metaTitle": "Лучшие курсы photoshop | Обучение Photoshop с нуля 2022",
+            "metaDescription": "Рейтинг курсы Adobe Photoshop, обучение фотошопу для начинающих | Отзывы учеников о курсах по графическому дизайну в фотошопе. Освой Photoshop онлайн с нуля. Бесплатные курсы и уроки",
+            "firstCategory": 0,
+            "advantages": [
+                {
+                    "_id": "lksdjfldsjf",
+                    "title": "",
+                    "description": ""
+                }
+            ],
+            "createdAt": "2022-05-21T17:54:12.3342",
+            "updatedAt": "2022-05-21T17:54:12.3342",
+            "__v": 0,
+            "hh": {
+                "__id": "lskdjfldskfdsj",
+                "count": 13000,
+                "juniorSalary": 35000,
+                "middleSalary": 110000,
+                "seniorSalary": 194000,
+                "updatedAt": "2022-05-21T17:54:12.3342"
+            }
+        }
+    ],
+
+
+
+    "products": [
+        {
+            "id": 1,
+            "categories": "design",
+            "tags": [
+                "Помощь в трудоустройстве",
+                "Заработок с 4 месяца",
+                "2 месяца английского языка в подарок"
+            ],
+            "title": "Профессия Графический Дизайнер",
+            "link": "http://google.com",
+            "price": 2323,
+            "credit": 233223,
+            "oldPrice": 3223,
+            "description": "Вы узнаете, как создать фирменный стиль и разработать крутые логотипы, научитесь работать в Figma",
+            "characteristics": [
+                {
+                    "value": "Skillbox",
+                    "name": "Школа"
+                },
+                {
+                    "value": "Диплом",
+                    "name": "Документ об окончании"
+                },
+                {
+                    "value": "С нуля",
+                    "name": "Сложность"
+                },
+                {
+                    "value": "24 месяца",
+                    "name": "Длительность"
+                }
+            ],
+            "createdAt": "2022-05-21T17:54:12.3342",
+            "updatedAt": "2022-05-21T17:54:12.3342",
+            "__v": 0,
+            "image": "sdlkjfdlkf",
+            "initialRating": 5,
+            "reviews": [],
+            "reviewCount": 0,
+            "reviewAvg": null
+        },
+        {
+            "id": 1,
+            "categories": "design",
+            "tags": [
+                "Помощь в трудоустройстве",
+                "Заработок с 4 месяца",
+                "2 месяца английского языка в подарок"
+            ],
+            "title": "Профессия Графический Дизайнер",
+            "link": "http://google.com",
+            "price": 2323,
+            "credit": 233223,
+            "oldPrice": 3223,
+            "description": "Вы узнаете, как создать фирменный стиль и разработать крутые логотипы, научитесь работать в Figma",
+            "characteristics": [
+                {
+                    "value": "Skillbox",
+                    "name": "Школа"
+                },
+                {
+                    "value": "Диплом",
+                    "name": "Документ об окончании"
+                },
+                {
+                    "value": "С нуля",
+                    "name": "Сложность"
+                },
+                {
+                    "value": "24 месяца",
+                    "name": "Длительность"
+                }
+            ],
+            "createdAt": "2022-05-21T17:54:12.3342",
+            "updatedAt": "2022-05-21T17:54:12.3342",
+            "__v": 0,
+            "image": "sdlkjfdlkf",
+            "initialRating": 5,
+            "reviews": [],
+            "reviewCount": 0,
+            "reviewAvg": null
+        }
+    ]
+}
