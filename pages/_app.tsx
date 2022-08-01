@@ -1,8 +1,9 @@
 import Head from "next/head";
 import { AppProps } from "../node_modules/next/app";
 import "../styles/globals.css";
+import Router from 'next/router';
 
-function MyApp({ Component, pageProps, router }: AppProps): JSX.Element {
+function MyApp({ Component, pageProps }: AppProps): JSX.Element {
   return (
     <>
       <Head>
@@ -11,7 +12,7 @@ function MyApp({ Component, pageProps, router }: AppProps): JSX.Element {
         <link rel="icon" href="/favicon.ico" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;800&family=Noto+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-        <meta property='og:url' content={'наш домен + текущий роутер' + router.asPath}></meta>
+        <meta property='og:url' content={'наш домен + текущий роутер' + Router.asPath}></meta>
         <meta property='og:locale' content={'ru_RU'}></meta>
         <meta property='og:type' content={'article'}></meta>
       </Head>

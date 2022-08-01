@@ -1,6 +1,6 @@
 import cn from 'classnames';
 import styles from './Search.module.css';
-import React, { useState } from 'react';
+import React, { useState, KeyboardEvent } from 'react';
 import { SearchProps } from './Search.props';
 import { Input } from '../Input/Input';
 import { Button } from '../Button/Button';

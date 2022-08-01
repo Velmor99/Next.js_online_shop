@@ -9,6 +9,7 @@
     },
     "prepare": "husky install",
     "dev": "next dev",
+    "export": "next export",
     "build": "next build",
     "start": "next start",
     "lint": "stylelint \"**/*.css\" --fix",
