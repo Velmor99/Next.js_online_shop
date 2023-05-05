@@ -4,8 +4,8 @@ import { ProductModel } from "../../interfaces/product.interface";
 
 
 export interface TopPageComponentProps {
-    firstCategory: number;
-    page: TopPageModel[];
+    firstCategory: string;
+    page: TopPageModel;
     products: ProductModel[];
 }
   

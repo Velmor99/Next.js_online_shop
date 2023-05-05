@@ -49,8 +49,8 @@ function Home({menu, firstCategory}: HomeProps): JSX.Element {
 export default withLayout(Home);
 
 export const getStaticProps: GetStaticProps<HomeProps> = async () => {
-  const firstCategory = 0;
-  const {data: menu} = await axios.get<MenuItem[]>(process.env.NEXT_PUBLIC_DOMAIN + '/categories');
+  const firstCategory = "Courses";
+  const {data: menu} = await axios.post<MenuItem[]>(process.env.NEXT_PUBLIC_DOMAIN + '/api/top-page/findByCategory', {firstCategory: "Courses"});
   return {
     props: {
       menu,
@@ -61,5 +61,5 @@ export const getStaticProps: GetStaticProps<HomeProps> = async () => {
 
 interface HomeProps extends Record<string, unknown> {
   menu: MenuItem[],
-  firstCategory: number
+  firstCategory: string,
 }

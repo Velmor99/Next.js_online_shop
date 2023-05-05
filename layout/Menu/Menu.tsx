@@ -79,7 +79,7 @@ export const Menu = (): JSX.Element => {
         <div className={styles.secondBlock}>
           {menu &&
             menu.map((m) => {
-              if (m.pages.map((p) => p.alias).includes(router.asPath.split('/')[2])) {
+              if (m.pages.map((p) => p.title).includes(router.asPath.split('/')[2])) {
                 m.isOpened = true;
               }
               return (
@@ -119,7 +119,7 @@ export const Menu = (): JSX.Element => {
               [styles.thirdLevelActive]: `/${route}/${page.alias}` === router.asPath,
             })}
           >
-            {page.category}
+            {page.alias}
           </a>
         </Link>
       </motion.div>

@@ -13,6 +13,8 @@ export const TopPageComponent = ({ page, products, firstCategory }: TopPageCompo
     sort: SortEnum.Rating,
   });
 
+  console.log(page)
+
   const y = useScrollY();
 
   useEffect(() => {
@@ -26,15 +28,15 @@ export const TopPageComponent = ({ page, products, firstCategory }: TopPageCompo
   return (
     <div className={styles.wrapper}>
       <div className={styles.title}>
-        <Htag tag="h1">Курсы по Photoshop</Htag>
+        <Htag tag="h1">{page.title}</Htag>
         <Tag color="gray">10</Tag>
         <Sort sort={sort} setSort={setSort} />
       </div>
-      <div>
+      {/* <div>
         <p>Финансовый аналитик</p>
         <p>Финансовый аналитик</p>
         <p>Финансовый аналитик</p>
-      </div>
+      </div> */}
 
       <Product layout />
 
