@@ -1,14 +1,12 @@
-import cn from 'classnames';
 import { useReducedMotion } from 'framer-motion';
 import { useEffect, useReducer } from 'react';
-import { Htag, Tag, HhData, Advantages, Paragraph, Sort, Product } from '../../components';
+import { Htag, Tag, Advantages, Sort, Product } from '../../components';
 import { SortEnum } from '../../components/Sort/Sort.props';
-import { useScrollY } from '../../hooks/useScrollY';
 import { sortReducer } from './sort.reducer';
 import styles from './TopPageComponent.module.css';
 import { TopPageComponentProps } from './TopPageComponent.props';
 
-export const TopPageComponent = ({ page, products, firstCategory }: TopPageComponentProps): JSX.Element => {
+export const TopPageComponent = ({ page, products }: TopPageComponentProps): JSX.Element => {
   const [{ products: sortedProducts, sort }, dispatchSort] = useReducer(sortReducer, {
     products,
     sort: SortEnum.Rating,
