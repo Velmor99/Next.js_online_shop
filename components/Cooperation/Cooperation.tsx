@@ -17,25 +17,25 @@ export const CooperationBlock = () => {
       </h2>
       <ul className={styles.labelList}>
         <li className={styles.labelListItem}>
-          <Image className={styles.labelImage} src={illinoisImage}></Image>
+          <Image alt='illinois' className={styles.labelImage} src={illinoisImage}></Image>
         </li>
         <li className={styles.labelListItem}>
-          <Image className={styles.labelImage} src={dukeImage}></Image>
+          <Image alt='duke' className={styles.labelImage} src={dukeImage}></Image>
         </li>
         <li className={styles.labelListItem}>
-          <Image className={styles.labelImage} src={googleImage}></Image>
+          <Image alt='google' className={styles.labelImage} src={googleImage}></Image>
         </li>
         <li className={styles.labelListItem}>
-          <Image className={styles.labelImage} src={imperialImage}></Image>
+          <Image alt='imperial' className={styles.labelImage} src={imperialImage}></Image>
         </li>
         <li className={styles.labelListItem}>
-          <Image className={styles.labelImage} src={ibmImage}></Image>
+          <Image alt='ibm' className={styles.labelImage} src={ibmImage}></Image>
         </li>
         <li className={styles.labelListItem}>
-          <Image className={styles.labelImage} src={stanfordImage}></Image>
+          <Image alt='stanford' className={styles.labelImage} src={stanfordImage}></Image>
         </li>
         <li className={styles.labelListItem}>
-          <Image className={styles.labelImage} src={pennImage}></Image>
+          <Image alt='penn' className={styles.labelImage} src={pennImage}></Image>
         </li>
       </ul>
     </div>
