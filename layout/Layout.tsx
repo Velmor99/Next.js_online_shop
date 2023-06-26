@@ -7,6 +7,8 @@ import { Footer } from './Footer/Footer';
 import { FunctionComponent, useRef, useState, KeyboardEvent } from 'react';
 import { AppContextProvider, IAppContext } from '../context/app.context';
 import { Up } from '../components';
+import { TopPageModel } from '../interfaces/page.interface';
+import { ProductModel } from '../interfaces/product.interface';
 
 const Layout = ({ children }: LayoutProps): JSX.Element => {
   const [isSkipLinkDisplayed, setIsSkipLinkDisplayed] = useState(false)

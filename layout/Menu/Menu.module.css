@@ -10,6 +10,7 @@
 	line-height: 25px;
 	grid-template-columns: 24px 1fr;
 	gap: 20px;
+	cursor: pointer;
 }
 
 .firstLevelActive,

@@ -1,99 +1,57 @@
+import { GetServerSideProps, GetServerSidePropsContext, GetStaticProps } from 'next';
 import React from 'react';
 import { withLayout } from '../layout/Layout';
-import {GetStaticProps, GetStaticPropsContext } from 'next';
 import axios from 'axios';
 import { MenuItem } from '../interfaces/menu.interface';
+import { ParsedUrlQuery } from 'querystring';
+import { Error404 } from './404';
+import { Head } from 'next/document';
+import { TopPageComponent } from '../page-components';
+import { TopPageModel } from '../interfaces/page.interface';
+import { ProductModel } from '../interfaces/product.interface';
 
-function Search(): JSX.Element {
+
+function Search({products, firstCategory, page}: SearchProps): JSX.Element {
+
+	if ( !products || products.length === 0 ) {
+		return <Error404 />;
+	}
+
   return (
-    <></>
-  );
+    <>
+      <TopPageComponent
+        firstCategory={firstCategory}
+        products={products}
+        page={page}
+      />
+    </>
+	);
 }
 
 export default withLayout(Search);
 
-// export const getStaticPaths: GetStaticPaths = async () => {
-//   // let paths: string[] = [];
-//   // for (const m of firstLevelMenu) {
-//   //   const { data: menu } = await axios.get<MenuItem[]>(process.env.NEXT_PUBLIC_DOMAIN + `/${m}`);
-//   //   paths = paths.concat(menu.flatMap((s) => s.pages.map((page) => `/${m.route}/${page.alias}`)));
-//   // }
-  
-//   return {
-//     paths: [
-//       '/couses/financial-analytics',
-//       '/couses/big-data',
-//       '/couses/data-science',
-//       '/couses/machine-learning',
-//       '/couses/finansovaya-gramotnost',
-//       '/couses/enterpreneurs',
-//       '/couses/graphic-design',
-//       '/couses/dizayn-interera',
-//       '/couses/web-design',
-//       '/couses/photoshop',
-//       '/couses/ArchiCAD',
-//       '/couses/landscape-design',
-//       '/couses/skethcing',
-//       '/couses/illustration',
-//       '/couses/seo',
-//       '/couses/smm',
-//       '/couses/copywriting',
-//       '/couses/targeting',
-//       '/couses/python',
-//       '/couses/1C',
-//       '/couses/photography',
-//     ],
-//     fallback: true,
-//   };
-// };
+export const getServerSideProps: GetServerSideProps = async (context: GetServerSidePropsContext<ParsedUrlQuery>) => {
+	const firstCategory = "Courses"
+	const { data: menu } = await axios.post<MenuItem[]>(process.env.NEXT_PUBLIC_DOMAIN + `/api/top-page/findByCategory`, {firstCategory: firstCategory});
+	const { data: products } = await axios.post<ProductModel[]>(
+		process.env.NEXT_PUBLIC_DOMAIN + `/api/product/searchByText`, {text: context.query.q}
+	);
+	const { data: page } = await axios.get<TopPageModel>(
+		process.env.NEXT_PUBLIC_DOMAIN + `/api/top-page/findByAlias/IT`
+	);
+  return {
+    props: {
+			menu,
+			products,
+			firstCategory,
+			page
+		}
+  }
+}
 
-// export const getStaticProps: GetStaticProps<CourseProps> = async ({
-//   params,
-// }: GetStaticPropsContext<ParsedUrlQuery>) => {
-//   if (!params) {
-//     return {
-//       notFound: true,
-//     };
-//   }
-//   const firstCategoryItem = firstLevelMenu.find(m => m.route == params.type);
-//   if(!firstCategoryItem) {
-//     return {
-//       notFound: true
-//     }
-//   }
-//   try {
-//     const { data: menu } = await axios.get<MenuItem[]>(process.env.NEXT_PUBLIC_DOMAIN + `/courses`);
-//     if(menu.length === 0) {
-//       return {
-//         notFound: true
-//       }
-//     }
-//     const { data: page } = await axios.get<TopPageModel[]>(
-//       process.env.NEXT_PUBLIC_DOMAIN + `/pages?alias=${params.alias}`
-//     );
-//     const category = page[0].category;
-//     const { data: products } = await axios.get<ProductModel[]>(
-//       process.env.NEXT_PUBLIC_DOMAIN + `/products?category=${category}`
-//     );
-//     return {
-//       props: {
-//         menu,
-//         firstCategory: firstCategoryItem.id,
-//         page,
-//         products,
-//       },
-//     };
-//   } catch(err) {
-//     return {
-//       notFound: true
-//     }
-//   }
-  
-// };
-
-// interface CourseProps extends Record<string, unknown> {
-//   menu: MenuItem[];
-//   firstCategory: number;
-//   page: TopPageModel[];
-//   products: ProductModel[];
-// }
+interface SearchProps extends Record<string, unknown> {
+	menu: MenuItem[];
+	firstCategory: string;
+  page: TopPageModel;
+  products: ProductModel[];
+}

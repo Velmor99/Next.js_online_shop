@@ -9,8 +9,13 @@ import { ProductModel } from '../../interfaces/product.interface';
 import { firstLevelMenu } from '../../helpers/helpers';
 import { TopPageComponent } from '../../page-components';
 import Head from 'next/head';
+import { Error404 } from '../404';
 
-function TopPage({ page, products, firstCategory }: CourseProps): JSX.Element {
+function TopPage({page, products, firstCategory}: TopPageProps): JSX.Element {
+  if (!page || !products) {
+		return <Error404 />;
+	}
+
   return (
     <>
     <Head>
@@ -44,7 +49,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
   };
 };
 
-export const getStaticProps: GetStaticProps<CourseProps> = async ({
+export const getStaticProps: GetStaticProps<TopPageProps> = async ({
   params,
 }: GetStaticPropsContext<ParsedUrlQuery>) => {
   if (!params) {
@@ -70,11 +75,9 @@ export const getStaticProps: GetStaticProps<CourseProps> = async ({
     const { data: page } = await axios.get<TopPageModel>(
       process.env.NEXT_PUBLIC_DOMAIN + `/api/top-page/findByAlias/${params.alias}`
     );
-    console.log('page', page)
     const { data: products } = await axios.post<ProductModel[]>(
-      process.env.NEXT_PUBLIC_DOMAIN + `/api/product/find`, {category: page.category, limit: 10}
+      process.env.NEXT_PUBLIC_DOMAIN + `/api/product/find`, {category: page.category, limit: 50}
     );
-    console.log('products', products)
     return {
       props: {
         menu,
@@ -82,6 +85,7 @@ export const getStaticProps: GetStaticProps<CourseProps> = async ({
         page,
         products,
       },
+      revalidate: 60,
     };
   } catch (err) {
     return {
@@ -90,8 +94,9 @@ export const getStaticProps: GetStaticProps<CourseProps> = async ({
   }
 };
 
-interface CourseProps extends Record<string, unknown> {
+interface TopPageProps extends Record<string, unknown> {
   menu: MenuItem[];
+  //TODO firstCategory: TopLevelCategory.Courses
   firstCategory: string;
   page: TopPageModel;
   products: ProductModel[];

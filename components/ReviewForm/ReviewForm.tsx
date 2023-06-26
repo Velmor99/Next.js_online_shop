@@ -7,8 +7,9 @@ import { Textarea } from '../Textarea/Textarea';
 import { Button } from '../Button/Button';
 import CloseIcon from './green-cross.svg';
 import { SubmitHandler, useForm, Controller } from 'react-hook-form';
-import { IReviewForm } from './ReviewForm.interface';
+import { IReviewForm, IReviewResponse } from './ReviewForm.interface';
 import { useState } from 'react';
+import axios from 'axios';
 
 export const ReviewForm = ({ productId, isOpened, className, ...props }: ReviewFormProps): JSX.Element => {
   const {
@@ -21,16 +22,21 @@ export const ReviewForm = ({ productId, isOpened, className, ...props }: ReviewF
   const [isSuccess, setIsSuccess] = useState<boolean>(false);
   const [error, setError] = useState<string>('');
 
-  const onSubmit: SubmitHandler<IReviewForm> = async (data) => {
+  const onSubmit: SubmitHandler<IReviewForm> = async (formData: IReviewForm) => {
     try {
-      await console.log(data);
-      reset();
-      setIsSuccess(true);
+      const { data } = await axios.post<IReviewResponse>(process.env.NEXT_PUBLIC_DOMAIN + '/api/review/create', {...formData, productId});
+      if(data.message) { 
+        setIsSuccess(true);
+        reset();
+      } else {
+        setError("Что-то пошло не так");
+      }
     } catch (error) {
-      console.log(error);
-      setError('Somethig went wrong');
-    } finally {
-      setError('yes');
+      if(axios.isAxiosError(error)) {
+        setError(error.message);
+      } else {
+        console.log(error);
+      }
     }
   };
 
