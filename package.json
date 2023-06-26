@@ -9,10 +9,11 @@
   "scripts": {
     "prepare": "husky install",
     "server": "json-server --watch data.json --port 3004",
-    "dev": "next dev",
+    "dev": "next",
     "export": "next export",
     "build": "next build",
-    "start": "next start",
+    "start": "next start -p $PORT",
+    "heroku-postbuild": "npm run build",
     "lint": "stylelint \"**/*.css\" --fix",
     "debug": "cross-env NODE_OPTIONS='--inspect' next dev"
   },
