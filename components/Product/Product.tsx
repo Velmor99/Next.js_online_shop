@@ -6,13 +6,11 @@ import { Rating } from '../Rating/Rating';
 import { Tag } from '../Tag/Tag';
 import { Button } from '../Button/Button';
 import { Divider } from '../Devider/Devider';
-import { declOfNumber } from '../../helpers/helpers';
-import Image from 'next/image';
+import { declOfNumber, priceUah } from '../../helpers/helpers';
 import { ForwardedRef, forwardRef, useRef, useState } from 'react';
 import { Review } from '../Review/Review';
 import { ReviewForm } from '../ReviewForm/ReviewForm';
 import { motion } from 'framer-motion';
-import { Advantages } from '../Advantages/Advantages';
 
 export const Product = motion(
   forwardRef(({ product, className, ...props }: ProductProps, ref: ForwardedRef<HTMLDivElement>): JSX.Element => {
@@ -30,7 +28,7 @@ export const Product = motion(
         behavior: 'smooth',
         block: 'start',
       });
-      reviewRef.current?.focus()
+      reviewRef.current?.focus();
     };
 
     if(product) {
@@ -39,16 +37,15 @@ export const Product = motion(
           <Card className={styles.product}>
             <div className={styles.logo}>
               <img
+                className={styles.logoImage}
                 src={'https://tacm.com/wp-content/uploads/2018/01/no-image-available.jpeg'}
                 alt={'no_image'}
-                width={70}
-                height={70}
               />
             </div>
             <div className={styles.title}>{product.title}</div>
             <div className={styles.price}>
-              <span><span className="visualyHidden">цена</span>{product.price}</span>
-              {product.oldPrice && <Tag className={styles.oldPrice} color="green">
+              <span><span className="visualyHidden"></span>{priceUah(product.price)}</span>
+              {product.oldPrice && product.price - product.oldPrice !== 0 && <Tag className={styles.oldPrice} color="green">
                 <span className="visualyHidden">скидка</span>
                 {product.price - product.oldPrice}
               </Tag>}
@@ -58,7 +55,7 @@ export const Product = motion(
               {product.credit}/<span className={styles.month}>мес</span>
             </div>
             <div className={styles.rating}>
-              <span className="visualyHidden">{`рейтинг ${product.reviewAvg ? Math.round(product.reviewAvg) : 0}`}</span>
+              <span className={"visualyHidden"}>{`рейтинг ${product.reviewAvg ? Math.round(product.reviewAvg) : 0}`}</span>
               <Rating rating={product.reviewAvg ? Math.round(product.reviewAvg) : 0} />
             </div>
             <div className={styles.tags}>{product.categories.map(c => <Tag key={c} className={styles.category} color='ghost'>{c}</Tag>)}</div>
@@ -122,7 +119,7 @@ export const Product = motion(
     } else {
       return (
         <div>Error</div>
-      )
+      );
     }
   })
 );

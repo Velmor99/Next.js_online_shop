@@ -41,7 +41,7 @@ export const Rating = forwardRef(
 
     const computeFocus = (r: number, i: number): number => {
       if(!isEditable) {
-        return -1
+        return -1;
       }
       if(!rating && i === 0) {
         return tabIndex ?? 0;
@@ -49,8 +49,8 @@ export const Rating = forwardRef(
       if(r === i + 1) {
         return tabIndex ?? 0;
       }
-      return -1
-    }
+      return -1;
+    };
 
     const changeDisplay = (item: number) => {
       if (!isEditable) {
@@ -68,21 +68,21 @@ export const Rating = forwardRef(
 
     const handleKey = ( e: KeyboardEvent) => {
       if(!isEditable || !setRating) {
-        return 
+        return;
       }
       if (e.code === 'ArrowRight' || e.code === 'ArrowUp') {
         if(!rating) {
-          setRating(1)
+          setRating(1);
         } else {
-          e.preventDefault()
-          setRating(rating < 5 ? rating + 1 : 5)
+          e.preventDefault();
+          setRating(rating < 5 ? rating + 1 : 5);
         }
-        ratingArrayRef.current[rating]?.focus()
+        ratingArrayRef.current[rating]?.focus();
       }
       if (e.code === 'ArrowLeft' || e.code === 'ArrowDown') {
-        e.preventDefault()
-        setRating(rating > 1 ? rating - 1 : 1)
-        ratingArrayRef.current[rating - 2]?.focus()
+        e.preventDefault();
+        setRating(rating > 1 ? rating - 1 : 1);
+        ratingArrayRef.current[rating - 2]?.focus();
       }
     };
 

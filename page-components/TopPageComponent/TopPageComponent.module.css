@@ -18,6 +18,10 @@
 	gap: 20px;
 }
 
+.seo {
+	display: none;
+}
+
 .seo h1 {
 	margin: 0;
 

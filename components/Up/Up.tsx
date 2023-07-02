@@ -1,5 +1,4 @@
 import styles from './Up.module.css';
-import UpIcon from './arrow.svg';
 import { useScrollY } from '../../hooks/useScrollY';
 import { useAnimation, motion } from 'framer-motion';
 import { useEffect } from 'react';

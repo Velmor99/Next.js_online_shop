@@ -4,39 +4,39 @@ import { Tag } from '../Tag/Tag';
 import styles from './CarouselCard.module.css';
 import cn from 'classnames';
 import { CarouselCardProps } from './CarouselCard.props';
+import { declOfNumber, priceUah } from '../../helpers/helpers';
 
 
-export const CarouselCard = ({className}: CarouselCardProps) => {
+export const CarouselCard = ({className, img, title, companyName, tags, price, discount, rating, feedbackCount}: CarouselCardProps) => {
   return (
     <div className={cn(styles.carouselCardContainer, className)}>
       <div className={styles.imageContainer}>
-        <img className={styles.image} src={'https://t4.ftcdn.net/jpg/04/73/25/49/360_F_473254957_bxG9yf4ly7OBO5I0O5KABlN930GwaMQz.jpg'}></img>
+        <Image height={210} width={394} className={styles.image} src={img} alt={'banner'}></Image>
       </div>
       <div className={styles.mainBlock}>
-      <h3 className={styles.mainTitle}>Матанализ для самых маленьких</h3>
+      <h3 className={styles.mainTitle}>{title}</h3>
         <div className={styles.leftSide}>
           <div className={styles.label}>
             <div className={styles.secondaryImageBlock}>
             <img className={styles.secondaryImage} src={'https://t4.ftcdn.net/jpg/04/73/25/49/360_F_473254957_bxG9yf4ly7OBO5I0O5KABlN930GwaMQz.jpg'}></img>
             </div>
-            <h4 className={styles.secondaryTitle}>Skillbox School</h4>
+            <h4 className={styles.secondaryTitle}>{companyName}</h4>
           </div>
           <div className={styles.ratingBlock}>
-            <Rating rating={4}></Rating>
-            <span>20 отзывов</span>
+            <Rating rating={rating}></Rating>
+            <span>{`${feedbackCount} ${declOfNumber(feedbackCount, ['отзыв', 'отзыва', 'отзывов'])}`}</span>
           </div>
         </div>
         <div className={styles.rightSide}>
           <div className={styles.tags}>
-            <Tag color='ghost'>Математика</Tag>
-            <Tag color='ghost'>Анализ</Tag>
+            {tags.map(t => <Tag key={t} color='ghost'>{t}</Tag>)}
           </div>
           <div className={styles.priceBlock}>
-            <span className={styles.price}>24000</span>
-            <Tag className={styles.tag} color='green'>-10000</Tag>
+            <span className={styles.price}>{priceUah(price)}</span>
+            <Tag className={styles.tag} color='green'>{discount}</Tag>
           </div>
         </div>
       </div>
     </div>
-  )
-}
+  );
+};

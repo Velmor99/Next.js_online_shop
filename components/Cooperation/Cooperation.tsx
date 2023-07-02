@@ -39,5 +39,5 @@ export const CooperationBlock = () => {
         </li>
       </ul>
     </div>
-  )
-}
+  );
+};

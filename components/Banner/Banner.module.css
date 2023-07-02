@@ -8,21 +8,14 @@
   grid-template-rows: 100px 140px 1fr;
   position: relative;
   min-height: 304px;
-  /* overflow: hidden; */
 }
 
 .bannerTitle {
   align-self: center;
   margin: 0;
-  /* justify-self: center; */
 }
 
-.link {
-  display: block;
-  z-index: 3;
-}
-
-.bannerButton {
+.link, .bannerButton {
   display: block;
   width: 241px;
   height: 54px;
@@ -142,7 +135,7 @@
     width: 86.17%;
   }
 
-  .bannerButton {
+  .link {
     grid-row: 3;
     grid-column: 1;
   }

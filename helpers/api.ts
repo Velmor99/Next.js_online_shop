@@ -1,12 +1,13 @@
 export const API = {
     topPage: {
-        find: "endpoint/to/find",
-        byAlias: 'endpoint/to/byAlias'
+        find: "/api/top-page/findByCategory",
+        findByAlias: '/api/top-page/findByAlias/'
     },
     product: {
-        find: 'endpoint/to/productFind'
+        find: '/api/product/find',
+        searchByText: '/api/product/searchByText'
     },
     review: {
-        createDemo: 'endpoint/to/createDemo'
+        create: '/api/review/create'
     }
-}
+};

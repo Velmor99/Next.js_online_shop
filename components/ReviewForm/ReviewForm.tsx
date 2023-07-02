@@ -10,6 +10,7 @@ import { SubmitHandler, useForm, Controller } from 'react-hook-form';
 import { IReviewForm, IReviewResponse } from './ReviewForm.interface';
 import { useState } from 'react';
 import axios from 'axios';
+import { API } from '../../helpers/api';
 
 export const ReviewForm = ({ productId, isOpened, className, ...props }: ReviewFormProps): JSX.Element => {
   const {
@@ -24,7 +25,7 @@ export const ReviewForm = ({ productId, isOpened, className, ...props }: ReviewF
 
   const onSubmit: SubmitHandler<IReviewForm> = async (formData: IReviewForm) => {
     try {
-      const { data } = await axios.post<IReviewResponse>(process.env.NEXT_PUBLIC_DOMAIN + '/api/review/create', {...formData, productId});
+      const { data } = await axios.post<IReviewResponse>(process.env.NEXT_PUBLIC_DOMAIN + API.review.create, {...formData, productId});
       if(data.message) { 
         setIsSuccess(true);
         reset();

@@ -1,7 +1,6 @@
 import Image from "next/image";
 import styles from './Banner.module.css';
-import { Button } from "../Button/Button"
-import { BannerProps } from "./Banner.props"
+import { Button } from "../Button/Button";
 import WomanImg from './default.png';
 import Link from "next/link";
 
@@ -22,5 +21,5 @@ export const Banner = (): JSX.Element => {
         </div>
         <div className={styles.circle}></div>
     </div>
-  )
-}
+  );
+};

@@ -10,12 +10,12 @@ import {useRouter} from 'next/router';
 import Link from 'next/link';
 
 export const Header = ({ className, ...props }: HeaderProps): JSX.Element => {
-  const [isOpened, setIsOpened] = useState<boolean>(false)
+  const [isOpened, setIsOpened] = useState<boolean>(false);
   const router = useRouter();
 
   useEffect(() => {
-    setIsOpened(false)
-  }, [router])
+    setIsOpened(false);
+  }, [router]);
 
   const variants = {
     opened: {
@@ -29,7 +29,7 @@ export const Header = ({ className, ...props }: HeaderProps): JSX.Element => {
       opacity: 0,
       x: '100%'
     }
-  }
+  };
 
   return <header className={cn(className, styles.header)}  {...props}>
     <Link href={'/'}>

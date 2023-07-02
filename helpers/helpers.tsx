@@ -12,7 +12,9 @@ export const firstLevelMenu: FirstLevelMenuItem[] = [
   { route: 'Products', name: 'Товары', icon: <ProductsIcon />, id: TopLevelCategory.Products },
 ];
 
+export const priceUah = (price: number): string => price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ').concat(' ₴');
+
 export const declOfNumber = (number: number, titles: [string, string, string]): string => {
-  const cases = [2, 0, 1, 1, 1, 2]
-  return titles[(number % 100 > 4 && number % 100 < 20) ? 2 : cases[(number % 10 < 5) ? number % 10 : 5]]
-}
+  const cases = [2, 0, 1, 1, 1, 2];
+  return titles[(number % 100 > 4 && number % 100 < 20) ? 2 : cases[(number % 10 < 5) ? number % 10 : 5]];
+};

@@ -9,7 +9,7 @@ import { useRouter } from 'next/router';
 
 export const Search = ({ className, ...props }: SearchProps): JSX.Element => {
   const [search, setSearch] = useState<string>('');
-  const router = useRouter()
+  const router = useRouter();
 
   const goToSearch = () => {
       router.push({
@@ -17,14 +17,14 @@ export const Search = ({ className, ...props }: SearchProps): JSX.Element => {
         query: {
           q: search
         }
-      })
-  }
+      });
+  };
 
   const handleKeyDown = (e: KeyboardEvent) => {
     if(e.key === 'Enter') {
-      goToSearch()
+      goToSearch();
     }
-  }
+  };
 
   return (
     <div className={cn(className, styles.search)} {...props}>

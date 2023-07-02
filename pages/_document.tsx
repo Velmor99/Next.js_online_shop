@@ -5,7 +5,7 @@ import Document, { Html, Head, Main, NextScript, DocumentContext, DocumentInitia
 //Эта запись стандартная ее можно найти в интернете
 class MyDocument extends Document {
     static async getInitialProps(ctx: DocumentContext): Promise<DocumentInitialProps> {
-        const initialProps = await Document.getInitialProps(ctx)
+        const initialProps = await Document.getInitialProps(ctx);
         return {...initialProps};
     }
 
@@ -23,4 +23,4 @@ class MyDocument extends Document {
   }
 }
 
-export default MyDocument
+export default MyDocument;

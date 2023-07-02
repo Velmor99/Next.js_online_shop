@@ -7,20 +7,18 @@ import { Footer } from './Footer/Footer';
 import { FunctionComponent, useRef, useState, KeyboardEvent } from 'react';
 import { AppContextProvider, IAppContext } from '../context/app.context';
 import { Up } from '../components';
-import { TopPageModel } from '../interfaces/page.interface';
-import { ProductModel } from '../interfaces/product.interface';
 
 const Layout = ({ children }: LayoutProps): JSX.Element => {
-  const [isSkipLinkDisplayed, setIsSkipLinkDisplayed] = useState(false)
-  const bodyRef = useRef<HTMLDivElement>(null)
+  const [isSkipLinkDisplayed, setIsSkipLinkDisplayed] = useState(false);
+  const bodyRef = useRef<HTMLDivElement>(null);
 
   const skipContentAction = (key: KeyboardEvent) => {
     if (key.code === 'Enter' || key.code === 'Space') {
-      key.preventDefault()
-      bodyRef.current?.focus()
+      key.preventDefault();
+      bodyRef.current?.focus();
     }
-    setIsSkipLinkDisplayed(false)
-  }
+    setIsSkipLinkDisplayed(false);
+  };
 
   return (
     <div className={styles.wrapper}>

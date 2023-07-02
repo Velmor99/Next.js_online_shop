@@ -1,15 +1,19 @@
 import styles from './Menu.module.css';
 import cn from 'classnames';
-import { useContext, KeyboardEvent } from 'react';
+import { useContext, KeyboardEvent, useState } from 'react';
 import { AppContext } from '../../context/app.context';
 import { FirstLevelMenuItem, PageItem } from '../../interfaces/menu.interface';
 import Link from 'next/link';
 import { NextRouter, useRouter } from 'next/router';
 import { firstLevelMenu } from '../../helpers/helpers';
 import { motion } from 'framer-motion';
+import axios from 'axios';
+import {MenuItem} from '../../interfaces/menu.interface';
+import { API } from '../../helpers/api';
 
 export const Menu = (): JSX.Element => {
-  const { menu, setMenu, firstCategory } = useContext(AppContext);
+  const { menu, setMenu } = useContext(AppContext);
+  const [currentActiveCategory, setCurrentActiveCategory] = useState('Courses');
   const router: NextRouter = useRouter();
   const variants = {
     visible: {
@@ -29,6 +33,24 @@ export const Menu = (): JSX.Element => {
     },
     hidden: { opacity: 0, height: 0 },
   };
+
+  const firstLevelVariant = {
+    visible: {
+      opacity: 1,
+      height: 'auto',
+    },
+    hidden: { opacity: 0, height: 0 },
+  };
+
+  const openFirstLevel = async (level: string) => {
+    const {data: menu} = await axios.post<MenuItem[]>(process.env.NEXT_PUBLIC_DOMAIN + API.topPage.find, {firstCategory: level});
+    await setCurrentActiveCategory(level);
+    setMenu && 
+      setMenu(
+        menu
+      );
+  };
+  // console.log('menu', menu)
 
   const openSecondLevel = (secondCategory: string) => {
     setMenu &&
@@ -54,19 +76,25 @@ export const Menu = (): JSX.Element => {
       <>
         {firstLevelMenu.map((m) => (
           <div key={m.route}>
-            <Link href={`/${m.route}`}>
-              <a>
+            <div onClick={() => openFirstLevel(m.route)}>
                 <div
                   className={cn(styles.firstLevel, {
-                    [styles.firstLevelActive]: m.id === firstCategory,
+                    [styles.firstLevelActive]: m.id === currentActiveCategory,
                   })}
                 >
                   {m.icon}
                   <span>{m.name}</span>
                 </div>
-              </a>
-            </Link>
-            {m.id === firstCategory && buildSecondLevel(m)}
+            </div>
+            {m.id === currentActiveCategory && 
+            <motion.div
+              initial={m.route !== currentActiveCategory ? 'visible' : 'hidden'}
+              animate={m.route ===currentActiveCategory ? 'visible' : 'hidden'}
+              variants={firstLevelVariant}
+            >
+              {buildSecondLevel(m)}
+            </motion.div>
+            }
           </div>
         ))}
       </>
@@ -111,16 +139,14 @@ export const Menu = (): JSX.Element => {
 
   const buildThirdLevel = (pages: PageItem[], route: string, isOpened: boolean) => {
     return pages.map((page) => (
-      <motion.div variants={variantsChildren}>
-        <Link href={`/${route}/${page.alias}`}>
-          <a
-            tabIndex={isOpened ? 0 : -1}
-            className={cn(styles.thirdLevel, {
-              [styles.thirdLevelActive]: `/${route}/${page.alias}` === router.asPath,
-            })}
-          >
+      <motion.div key={page._id} variants={variantsChildren}>
+        <Link href={`/${route}/${page.alias}`}
+        tabIndex={isOpened ? 0 : -1}
+        className={cn(styles.thirdLevel, {
+          [styles.thirdLevelActive]: `/${route}/${page.alias}` === router.asPath,
+        })}
+        >
             {page.alias}
-          </a>
         </Link>
       </motion.div>
     ));

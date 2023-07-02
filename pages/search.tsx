@@ -1,14 +1,14 @@
-import { GetServerSideProps, GetServerSidePropsContext, GetStaticProps } from 'next';
+import { GetServerSideProps, GetServerSidePropsContext } from 'next';
 import React from 'react';
 import { withLayout } from '../layout/Layout';
 import axios from 'axios';
 import { MenuItem } from '../interfaces/menu.interface';
 import { ParsedUrlQuery } from 'querystring';
 import { Error404 } from './404';
-import { Head } from 'next/document';
 import { TopPageComponent } from '../page-components';
 import { TopPageModel } from '../interfaces/page.interface';
 import { ProductModel } from '../interfaces/product.interface';
+import { API } from '../helpers/api';
 
 
 function Search({products, firstCategory, page}: SearchProps): JSX.Element {
@@ -31,13 +31,13 @@ function Search({products, firstCategory, page}: SearchProps): JSX.Element {
 export default withLayout(Search);
 
 export const getServerSideProps: GetServerSideProps = async (context: GetServerSidePropsContext<ParsedUrlQuery>) => {
-	const firstCategory = "Courses"
-	const { data: menu } = await axios.post<MenuItem[]>(process.env.NEXT_PUBLIC_DOMAIN + `/api/top-page/findByCategory`, {firstCategory: firstCategory});
+	const firstCategory = "Courses";
+	const { data: menu } = await axios.post<MenuItem[]>(process.env.NEXT_PUBLIC_DOMAIN + API.topPage.find, {firstCategory: firstCategory});
 	const { data: products } = await axios.post<ProductModel[]>(
-		process.env.NEXT_PUBLIC_DOMAIN + `/api/product/searchByText`, {text: context.query.q}
+		process.env.NEXT_PUBLIC_DOMAIN + API.product.searchByText, {text: context.query.q}
 	);
 	const { data: page } = await axios.get<TopPageModel>(
-		process.env.NEXT_PUBLIC_DOMAIN + `/api/top-page/findByAlias/IT`
+		process.env.NEXT_PUBLIC_DOMAIN + API.topPage.findByAlias + `IT`
 	);
   return {
     props: {
@@ -46,8 +46,8 @@ export const getServerSideProps: GetServerSideProps = async (context: GetServerS
 			firstCategory,
 			page
 		}
-  }
-}
+  };
+};
 
 interface SearchProps extends Record<string, unknown> {
 	menu: MenuItem[];

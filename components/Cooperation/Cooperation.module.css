@@ -49,7 +49,7 @@
   justify-self: center;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1380px) {
   .labelList {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr;

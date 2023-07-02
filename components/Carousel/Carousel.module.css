@@ -1,6 +1,26 @@
 .carousel {
-  display: flex;
-  grid-template-columns: 1fr;
+  display: grid;
+  grid-template-columns: 392px;
+  justify-content: center;
+  gap: 20px;
   width: 100%;
   margin: 0 auto;
+}
+
+.carouselGridItem {
+  justify-self: center;
+}
+
+@media (min-width: 1130px) {
+  .carousel {
+    grid-template-columns: 392px 392px;
+    justify-content: center;
+  }
+}
+
+@media (min-width: 1510px) {
+  .carousel {
+    grid-template-columns: 392px 392px 392px;
+    gap: 10px;
+  }
 }
